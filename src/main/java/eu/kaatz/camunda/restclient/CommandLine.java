@@ -46,11 +46,13 @@ public class CommandLine implements CommandLineRunner {
             System.out.println("Getting the full list of users ... ");
             users = userService.getAllUsers();
         } else {
-            System.out.println("Retrieving the first users page ... ");
+            System.out.print("Retrieving the first users page ... ");
             users = userService.getFirstUsersPage();
         }
 
-        users.stream().forEach(data -> System.out.println(data));
+        System.out.println("DONE");
+        System.out.println("These are the names of the user (<last name>, <first name>):");
+        users.stream().forEach(data -> System.out.println(data.getLastName() + ", " + data.getFirstName() ));
     }
 
 }
