@@ -7,20 +7,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CamundaRestApplication implements CommandLineRunner {
-
-	private static Logger LOG = LoggerFactory.getLogger(CamundaRestApplication.class);
+public class CamundaRestApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CamundaRestApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		LOG.info("EXECUTING : command line runner");
-
-		for (int i = 0; i < args.length; ++i) {
-			LOG.info("args[{}]: {}", i, args[i]);
-		}
-	}
 }
